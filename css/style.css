@@ -211,7 +211,7 @@ body .scene .hoverzone:hover {
   opacity: 1;
 }
 body .present {
-  background: center/contain no-repeat url("../img/mur-present.jpg");
+  background: center/contain no-repeat url("../img/mur-present.webp");
 }
 body .present .tableau {
   position: absolute;
@@ -240,7 +240,7 @@ body .present .draggable-mirror {
   width: min(24vw, 42.6666666667vh);
 }
 body .present#scene-dexpo-un {
-  background: center/contain no-repeat url("../img/flv-large.jpg");
+  background: center/contain no-repeat url("../img/flv-large.webp");
 }
 body .present#scene-dexpo-un .hoverzone {
   width: 79.8%;
@@ -248,7 +248,7 @@ body .present#scene-dexpo-un .hoverzone {
   left: 8.8%;
 }
 body .present#scene-dexpo-deux {
-  background: center/contain no-repeat url("../img/flv-rapproche.jpg");
+  background: center/contain no-repeat url("../img/flv-rapproche.webp");
 }
 body .present#scene-dexpo-deux .hoverzone {
   width: 46%;
@@ -259,7 +259,7 @@ body .present#saut-passe {
   animation: fade-in 500ms ease-out 3.5s 1 reverse forwards;
 }
 body .present#saut-passe .tableau {
-  background: center/contain no-repeat url("../img/portrait-juste-cadre.png");
+  background: center/contain no-repeat url("../img/portrait-juste-cadre.webp");
 }
 body .present#saut-passe .tableau .portrait {
   animation: fade-in 1.5s ease-out 700ms 1 reverse forwards;
@@ -286,18 +286,18 @@ body .russie .swiper .swiper-nav:hover {
   transform: scale(1.15);
 }
 body .russie .swiper .swiper-nav.swiper-button-prev {
-  background: #f5ad31 center/80% no-repeat url("../img/doigt-sign-invert.png");
+  background: #f5ad31 center/80% no-repeat url("../img/doigt-sign-invert.webp");
   left: 4em;
 }
 body .russie .swiper .swiper-nav.swiper-button-next {
-  background: #f5ad31 center/80% no-repeat url("../img/doigt-sign.png");
+  background: #f5ad31 center/80% no-repeat url("../img/doigt-sign.webp");
   right: 4em;
 }
 body .russie.arrive {
   animation: fade-in 500ms ease-in 1 normal forwards;
 }
 body .russie.mur, body .russie .mur {
-  background: center/contain no-repeat url("../img/mur-passe.jpg");
+  background: center/contain no-repeat url("../img/mur-passe.webp");
 }
 body .russie.mur .hoverzone, body .russie .mur .hoverzone {
   aspect-ratio: 449/482;
@@ -306,7 +306,7 @@ body .russie.mur .hoverzone, body .russie .mur .hoverzone {
   left: 37.2%;
 }
 body .russie.salon, body .russie .salon {
-  background: center/contain no-repeat url("../img/morozov-hotel.jpg");
+  background: center/contain no-repeat url("../img/morozov-hotel.webp");
 }
 body .russie.salon .hoverzone, body .russie .salon .hoverzone {
   width: 11.5%;
@@ -314,7 +314,7 @@ body .russie.salon .hoverzone, body .russie .salon .hoverzone {
   left: 38.7%;
 }
 body .russie.galerie, body .russie .galerie {
-  background: center/contain no-repeat url("../img/morozov-salon-vide.jpg");
+  background: center/contain no-repeat url("../img/morozov-salon-vide.webp");
 }
 body .russie.galerie .tableau, body .russie .galerie .tableau {
   position: absolute;
@@ -343,10 +343,10 @@ body .russie.galerie .draggable-mirror, body .russie .galerie .draggable-mirror 
   width: min(24.1vw, 42.8444444444vh);
 }
 body .russie.parler-morozov {
-  background: center/contain no-repeat url("../img/morozov-salon.jpg");
+  background: center/contain no-repeat url("../img/morozov-salon.webp");
 }
 body .russie.convaincu {
-  background: center/contain no-repeat url("../img/morozov-salon-monet.jpg");
+  background: center/contain no-repeat url("../img/morozov-salon-monet.webp");
 }
 body #journal {
   background: #d2dfe9;
@@ -355,7 +355,7 @@ body #journal {
 }
 body #journal #canvas {
   display: block;
-  background: center/contain no-repeat url(../img/journal-francais.jpg);
+  background: center/contain no-repeat url(../img/journal-francais.webp);
   margin: auto;
   box-shadow: 0 0.25em 1em -0.75em rgba(0, 0, 0, 0.2);
 }
@@ -392,7 +392,7 @@ body #puzzle .tuyaux-grid {
 }
 body #puzzle .tuyaux-grid .tuyau {
   transform-origin: center;
-  transition: all 860ms ease-out;
+  transition: all 680ms ease-out;
   aspect-ratio: 1/1;
   width: 100%;
   height: 100%;
@@ -438,10 +438,10 @@ body #puzzle .button {
   bottom: 25%;
 }
 body .giverny {
-  background: center/contain no-repeat url("../img/giverny-atelier.jpg");
+  background: center/contain no-repeat url("../img/giverny-atelier.webp");
 }
 body .giverny#giverny-exte {
-  background: center/contain no-repeat url("../img/giverny-exte.jpg");
+  background: center/contain no-repeat url("../img/giverny-exte.webp");
 }
 body .giverny#giverny-exte .hoverzone {
   width: 9.25%;
@@ -449,7 +449,7 @@ body .giverny#giverny-exte .hoverzone {
   left: 44.48%;
 }
 body .giverny#giverny-int {
-  background: center/contain no-repeat url("../img/giverny-int.jpg");
+  background: center/contain no-repeat url("../img/giverny-int.webp");
 }
 body .giverny#giverny-int .hoverzone {
   width: 11.85%;
@@ -462,7 +462,7 @@ body .giverny.atelier .hoverzone {
   left: 58.3%;
 }
 body #jeu-tableau {
-  background: center/contain no-repeat url("../img/waterloo/fond-jeu.png");
+  background: center/contain no-repeat url("../img/waterloo/fond-jeu.webp");
 }
 body #jeu-tableau .mur {
   display: grid;
@@ -487,7 +487,7 @@ body #jeu-tableau .mur .tableau.cache {
      -moz-user-select: none;
           user-select: none;
   cursor: default;
-  background: center/100% 100% no-repeat url("../img/waterloo/back-waterloo.jpg");
+  background: center/100% 100% no-repeat url("../img/waterloo/back-waterloo.webp");
 }
 body #voyage {
   animation: fade-in 500ms ease-out 9.5s 1 reverse forwards;

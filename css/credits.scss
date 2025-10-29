@@ -27,7 +27,7 @@ body{
 
 		.paragraphe{
 			color: $violet;
-			font-size: 1.3em;
+			font-size: 1.2em;
 			margin: 0;
 			width: 100%;
 			max-width: 1080px;
@@ -35,7 +35,7 @@ body{
 
 		.start{
 			display: block;
-			font-size: 1.25em;
+			font-size: 1.15em;
 			font-weight: 800;
 			padding: 0.5em 1.1em;
 			text-transform: uppercase;
@@ -43,7 +43,7 @@ body{
 			border: solid 0.25em $violet;
 			border-radius : 0.9em;
 			color: white;
-			background: $violet center / cover no-repeat url("../img/texture-start.jpg");
+			background: $violet center / cover no-repeat url("../img/index-texture.webp");
 			text-shadow: 0em 0em 0.4em rgba(0, 0, 0, 0.3);
 			transition: transform 200ms ease-in-out;
 			margin-top: 1.5em;
@@ -62,7 +62,7 @@ body{
 			font-weight: 800;
 			font-size: 1.75em;
 			color: $violet;
-			margin: 0.5em;
+			margin: 0.5em 0;
 		}
 
 		.paragraphe{
@@ -70,7 +70,7 @@ body{
 		}
 
 		.deco{
-			background: center / cover no-repeat url("../img/index-ornament.jpg");
+			background: center / cover no-repeat url("../img/index-ornament.webp");
 			height: 100%;
 			width: 38%;
 			position: absolute;
@@ -95,7 +95,7 @@ body{
 			.doigt-sign{
 				height: 2em;
 				aspect-ratio: 104/72;
-				background: center / cover no-repeat url("../img/doigt-sign.png");
+				background: center / cover no-repeat url("../img/doigt-sign.webp");
 			}
 		}
 
