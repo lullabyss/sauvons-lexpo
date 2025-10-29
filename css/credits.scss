@@ -1,0 +1,106 @@
+@use "_variables" as *;
+@use "_mixins" as m;
+
+body{
+	@include m.Preset();
+
+	.credit{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		min-height: 100vh;
+		margin: 0;
+		box-sizing: border-box;
+		padding: 0 5% 5%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start; 
+		justify-content: center;
+
+		h1{
+			font-weight: 400;
+			margin: 0;
+			font-size: 5.5em;
+			color: #ffffff;
+		}
+
+		.paragraphe{
+			color: $violet;
+			font-size: 1.3em;
+			margin: 0;
+			width: 100%;
+			max-width: 1080px;
+		}
+
+		.start{
+			display: block;
+			font-size: 1.25em;
+			font-weight: 800;
+			padding: 0.5em 1.1em;
+			text-transform: uppercase;
+			letter-spacing: 0.01em;
+			border: solid 0.25em #25214e;
+			border-radius : 0.9em;
+			color: white;
+			background: center / cover no-repeat url("../img/texture-start.jpg");
+			text-shadow: 0em 0em 0.4em rgba(0, 0, 0, 0.3);
+			transition: transform 200ms ease-in-out;
+			margin-top: 1.5em;
+
+			&:hover, &:active{
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	.debut{
+		background-color: $bleuciel;
+		gap: 1em;
+
+		h2{
+			font-weight: 800;
+			font-size: 1.75em;
+			color: $violet;
+			margin: 0.5em;
+		}
+
+		.paragraphe{
+			width: 57%;
+		}
+
+		.deco{
+			background: center / cover no-repeat url("../img/index-ornament.jpg");
+			height: 100%;
+			width: 38%;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+
+	.fin{
+		background-color: $orange;
+		gap: 1.5em;
+
+		.paragraphe{
+			display: flex;
+			justify-content: flex-start;
+			gap: 0.5em;
+
+			p{
+				margin: 0;
+			}
+
+			.doigt-sign{
+				height: 2em;
+				aspect-ratio: 104/72;
+				background: center / cover no-repeat url("../img/doigt-sign.png");
+			}
+		}
+
+		.start{
+			margin-left: 3.4em;
+		}
+	}
+}

@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: acuta, serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: clamp(12px, 0.9vw, 16px);
+}
+body a:link, body a:visited, body a:hover, body a:active {
+  color: initial;
+  text-decoration: none;
+}
+body img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .global-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+body .global-link:hover {
+  cursor: pointer;
+}
+body .italic {
+  font-style: italic;
+}
+body .bold {
+  font-weight: 700;
+}
+body .credit {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0 5% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+body .credit h1 {
+  font-weight: 400;
+  margin: 0;
+  font-size: 5.5em;
+  color: #ffffff;
+}
+body .credit .paragraphe {
+  color: #25214e;
+  font-size: 1.3em;
+  margin: 0;
+  width: 100%;
+  max-width: 1080px;
+}
+body .credit .start {
+  display: block;
+  font-size: 1.25em;
+  font-weight: 800;
+  padding: 0.5em 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  border: solid 0.25em #25214e;
+  border-radius: 0.9em;
+  color: white;
+  background: center/cover no-repeat url("../img/texture-start.jpg");
+  text-shadow: 0em 0em 0.4em rgba(0, 0, 0, 0.3);
+  transition: transform 200ms ease-in-out;
+  margin-top: 1.5em;
+}
+body .credit .start:hover, body .credit .start:active {
+  transform: scale(1.1);
+}
+body .debut {
+  background-color: #d2dfe9;
+  gap: 1em;
+}
+body .debut h2 {
+  font-weight: 800;
+  font-size: 1.75em;
+  color: #25214e;
+  margin: 0.5em;
+}
+body .debut .paragraphe {
+  width: 57%;
+}
+body .debut .deco {
+  background: center/cover no-repeat url("../img/index-ornament.jpg");
+  height: 100%;
+  width: 38%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+body .fin {
+  background-color: #f5ad31;
+  gap: 1.5em;
+}
+body .fin .paragraphe {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5em;
+}
+body .fin .paragraphe p {
+  margin: 0;
+}
+body .fin .paragraphe .doigt-sign {
+  height: 2em;
+  aspect-ratio: 104/72;
+  background: center/cover no-repeat url("../img/doigt-sign.png");
+}
+body .fin .start {
+  margin-left: 3.4em;
+}/*# sourceMappingURL=credits.css.map */

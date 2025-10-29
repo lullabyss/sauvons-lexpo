@@ -1,0 +1,47 @@
+// Couleurs
+$violet: #25214e;
+$bleu: #9dcaee;
+$bleuciel: #d2dfe9;
+$orange: #f5ad31;
+$peche: #f5dc9f;
+
+// ombre
+$shadow: 0 0.25em 1em -0.75em rgba(0, 0, 0, 0.2);
+
+// ANIMATIONS
+@mixin FadeIn(){
+	@keyframes fade-in{
+		from{
+			opacity: 0;
+		}
+
+		to{
+			opacity: 1;
+		}
+	}
+
+	animation-name: fade-in;
+	animation-timing-function: ease-in-out;
+	animation-duration: 480ms;
+	animation-fill-mode: forwards;
+}
+
+@mixin BulleIn(){
+	@keyframes bulle-in{
+		0%{
+			opacity: 0;
+			transform: translateY(5%);
+		}
+
+		100%{
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	opacity: 0;
+	animation-name: bulle-in;
+	animation-timing-function: ease-out;
+	animation-duration: 480ms;
+	animation-fill-mode: forwards;
+}
