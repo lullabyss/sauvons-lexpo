@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://use.typekit.net/xya0qrm.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Lien pour les JS de drag and drop-->
+	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.12/lib/draggable.bundle.js"></script>
+	<script src="../javascript/drag-and-drop.js"></script>
+	<title>Salon de Morozov</title>
+</head>
+
+
+<body>
+	<section class="scene russie galerie" id="accroche-monet">
+		<div class="dialogue game-on">
+			<div class="bulle pensee visible">
+				<p class="parole">
+					Il reste une place sur ce mur.
+				</p>
+			</div>
+		</div>
+
+		<!-- Jeu drag and drop -->
+		<div class="container depart tableau">
+			<!--La data-dropzone permet contraindre l'emplacement-->
+			<div class="dropzone draggable-dropzone--occupied" data-dropzone="1">
+				<div class="item">
+					<div class="hoverzone">
+						<img src="../img/hovers/waterloo-true-hover.jpg"
+							alt="Tableau de Waterloo Bridge, effet de brouillard">
+					</div>
+
+					<img src="../img/waterloo/waterloo-true.jpg" alt="Tableau de Waterloo Bridge, effet de brouillard" />
+				</div>
+			</div>
+		</div>
+
+		<div class="container tableau">
+			<div class="dropzone emplacement" data-dropzone="1"></div>
+		</div>
+		<!-- fin du jeu -->
+
+		<a href="21-morozov-convaincu.html" class="button reussite">Il convient parfaitement ici</a>
+	</section>
+</body>
+
+</html>

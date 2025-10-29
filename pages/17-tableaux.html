@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://use.typekit.net/xya0qrm.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- JS pour le jeu du tableau -->
+	 <script src="../javascript/tableaux.js"></script>
+	<title>Le jeu du tableau</title>
+</head>
+
+<body>
+	<section class="scene" id="jeu-tableau">
+
+		<!-- Tableaux sur le mur -->
+		<div class="mur">
+			<div class="tableau decoy" data-message="gris">
+				<img src="../img/waterloo/waterloo-1.jpg" alt="Waterloo Bridge, temps gris">
+			</div>
+	
+			<div class="tableau decoy" data-message="brume">
+				<img src="../img/waterloo/waterloo-2.jpg" alt="Pont de Waterloo, effet de la brume">
+			</div>
+	
+			<div class="tableau decoy" data-message="pont">
+				<img src="../img/waterloo/waterloo-3.jpg" alt="Londres, le Pont de Waterloo">
+			</div>
+	
+			<div class="tableau decoy" data-message="brouillard">
+				<img src="../img/waterloo/waterloo-4.jpg" alt="Pont de Waterloo, la lumière du soleil dans le brouillard">
+			</div>
+	
+			<div class="tableau decoy" data-message="brumeux">
+				<img src="../img/waterloo/waterloo-5.jpg" alt="Waterloo Bridge, soleil brumeux">
+			</div>
+	
+			<div class="tableau cle" data-message="cle" data-correct="true">
+				<img src="../img/waterloo/waterloo-true.jpg" alt="Waterloo Bridge, effet de brouillard">
+			</div>
+	
+			<div class="tableau decoy" data-message="soleil">
+				<img src="../img/waterloo/waterloo-6.jpg" alt="Waterloo Bridge, effet de soleil">
+			</div>
+	
+			<div class="tableau decoy" data-message="pastel">
+				<img src="../img/waterloo/waterloo-7.jpg" alt="Waterloo Bridge, pastel">
+			</div>
+		</div>
+		
+
+
+		<!-- Consisgne et indices -->
+		<div class="dialogue game-on">
+			<div class="bulle pensee visible" data-delay="0">
+				<p class="parole">
+					Un de ces tableaux était dans l&rsquo;exposition de la Fondation&#8239;!
+					<br>Mais lequel&#8239;?
+				</p>
+			</div>
+	
+			<div class="bulle pensee indice gris" data-delay="0">
+				<p class="parole">
+					<span class="italic">Waterloo Bridge, temps gris</span>.
+					<br>Non, il était moins net.
+				</p>
+			</div>
+	
+			<div class="bulle pensee indice brume" data-delay="0">
+				<p class="parole">
+					<span class="italic">Pont de Waterloo, effet de la brume</span>.
+					<br>Mmh, dans mes souvenirs il était plus rose que ça.
+				</p>
+			</div>
+	
+			<div class="bulle pensee indice pont" data-delay="0">
+				<p class="parole">
+					<span class="italic">Londres, le Pont de Waterloo</span>.
+					<br>Celui-ci est trop sombre.
+				</p>
+			</div>
+	
+			<div class="bulle pensee indice brouillard" data-delay="0">
+				<p class="parole">
+					<span class="italic">Pont de Waterloo, la lumière du soleil dans le brouillard</span>.
+					<br>Il n&rsquo;y avait pas qu&rsquo;une seule gondole.
+				</p>
+			</div>
+	
+			<div class="bulle pensee indice brumeux" data-delay="0">
+				<p class="parole">
+					<span class="italic">Waterloo Bridge, soleil brumeux</span>.
+					<br>Je crois qu&rsquo;il y avait un peu plus de contraste.
+				</p>
+			</div>
+
+			<div class="bulle pensee indice cle" data-delay="0">
+				<p class="parole">
+					<span class="italic">Waterloo Bridge, effet de brouillard</span>.
+					<br>Oui, c&rsquo;est bien celui-ci que j&rsquo;ai vu à la Fondation&#8239;!
+				</p>
+			</div>
+	
+			<div class="bulle pensee indice soleil" data-delay="0">
+				<p class="parole">
+					<span class="italic">Waterloo Bridge, effet de soleil</span>.
+					<br>Je ne me souviens pas d&rsquo;un aussi beau temps.
+				</p>
+			</div>
+	
+			<div class="bulle pensee indice pastel" data-delay="0">
+				<p class="parole">
+					<span class="italic">Waterloo Bridge, pastel</span>.
+					<br>Celui-ci est trop clair.
+				</p>
+			</div>
+		</div>
+		<!-- Fin du dialogue -->
+
+
+		<a href="18-monet.html" class="button reussite">Choisir ce tableau</a>
+
+	</section>
+</body>
+
+</html>
