@@ -1,0 +1,619 @@
+body {
+  margin: 0;
+  font-family: acuta, serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: clamp(12px, 0.9vw, 16px);
+  background-color: #000;
+}
+body a:link, body a:visited, body a:hover, body a:active {
+  color: initial;
+  text-decoration: none;
+}
+body img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .global-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+body .global-link:hover {
+  cursor: pointer;
+}
+body .italic {
+  font-style: italic;
+}
+body .bold {
+  font-weight: 700;
+}
+body .scene {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100vw;
+  max-width: 177.7777777778vh;
+  height: auto;
+  max-height: 100vh;
+  margin: auto;
+  background-color: #d2dfe9;
+  overflow: hidden;
+}
+body .scene .dialogue {
+  position: absolute;
+  top: 0;
+  left: 2%;
+  z-index: 2;
+  width: 42%;
+  height: auto;
+  max-height: 72%;
+  padding: 3em;
+  box-sizing: border-box;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body .scene .dialogue::-webkit-scrollbar {
+  display: none;
+}
+body .scene .dialogue .bulle {
+  border-radius: 1.85em;
+  padding: 1.35em 2em 1.5em;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 0.25em 1em -0.75em rgba(0, 0, 0, 0.2);
+  margin-top: 1.1em;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  min-width: 45%;
+  display: none;
+  transform: translateY(5%);
+  transition: all 0.5s ease-out;
+}
+body .scene .dialogue .bulle .nom {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #25214e;
+  margin: 0 0 0.5em;
+}
+body .scene .dialogue .bulle .parole {
+  margin: 0;
+}
+body .scene .dialogue .bulle.visible {
+  display: block;
+  opacity: 0;
+  animation-name: bulle-in;
+  animation-timing-function: ease-out;
+  animation-duration: 480ms;
+  animation-fill-mode: forwards;
+}
+@keyframes bulle-in {
+  0% {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+body .scene .dialogue .reponse {
+  background-color: #9dcaee;
+  max-width: 90%;
+  align-self: flex-end;
+  margin-right: 0;
+  margin-left: auto;
+}
+body .scene .dialogue .pensee {
+  background-color: #25214e;
+  max-width: 90%;
+  color: white;
+  font-style: italic;
+  align-self: flex-end;
+  padding: 1.35em 1.85em;
+  box-shadow: 0 0 1.4em -0.2em rgba(50, 30, 220, 0.5);
+  margin-right: 0;
+  margin-left: auto;
+}
+body .scene .dialogue .pensee .italic {
+  font-style: normal;
+}
+body .scene .dialogue.game-on {
+  top: unset;
+  left: unset;
+  bottom: 1.5em;
+  right: 0;
+  max-height: 100%;
+  width: 40%;
+}
+body .scene .dialogue.game-on .pensee {
+  margin-right: auto;
+  margin-left: 0;
+  max-width: 100%;
+}
+body .scene .button {
+  display: none;
+  font-size: 1.15em;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 1em 1.4em;
+  background-color: #f5ad31;
+  color: white;
+  border-radius: 2em;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  translate: -50% 50%;
+  transition: transform 200ms ease-in-out;
+  box-shadow: 0 0.25em 1em -0.75em rgba(0, 0, 0, 0.2);
+}
+body .scene .button:hover, body .scene .button:active {
+  transform: scale(1.1);
+}
+body .scene .button.clickable {
+  display: block;
+  animation: fade-in 360ms ease-out forwards;
+}
+body .scene .lieu {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-timing-function: ease-in-out;
+  animation-duration: 480ms;
+  animation-fill-mode: forwards;
+  animation-delay: 250ms;
+  background-color: rgba(210, 223, 233, 0.7);
+  -webkit-backdrop-filter: blur(0.1em);
+          backdrop-filter: blur(0.1em);
+  position: absolute;
+  width: 34em;
+  bottom: 2em;
+  right: 2em;
+  color: #25214e;
+  padding: 1.5em 1.75em;
+  box-sizing: border-box;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body .scene .lieu .titre-lieu {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 1.5em;
+  margin: 0;
+}
+body .scene .lieu .labeur-lieu {
+  font-size: 1.2em;
+  color: #25214e;
+  margin: 0.5em 0 0;
+}
+body .scene .hoverzone {
+  position: absolute;
+  height: auto;
+  opacity: 0;
+  transition: opacity 320ms ease-in-out;
+}
+body .scene .hoverzone:hover {
+  opacity: 1;
+}
+body .present {
+  background: center/contain no-repeat url("../img/mur-present.jpg");
+}
+body .present .tableau {
+  position: absolute;
+  top: 13%;
+  left: 37%;
+  aspect-ratio: 1019/1080;
+  width: 24%;
+}
+body .present .tableau .hoverzone {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+body .present .tableau .dropzone {
+  height: 100%;
+}
+body .present .tableau.depart {
+  top: unset;
+  left: 5%;
+  bottom: 3%;
+}
+body .present .draggable-mirror {
+  aspect-ratio: 1018/1080;
+  width: 24em;
+  width: min(24vw, 42.6666666667vh);
+}
+body .present#scene-dexpo-un {
+  background: center/contain no-repeat url("../img/flv-large.jpg");
+}
+body .present#scene-dexpo-un .hoverzone {
+  width: 79.8%;
+  top: 2.6%;
+  left: 8.8%;
+}
+body .present#scene-dexpo-deux {
+  background: center/contain no-repeat url("../img/flv-rapproche.jpg");
+}
+body .present#scene-dexpo-deux .hoverzone {
+  width: 46%;
+  top: 73.3%;
+  left: 32%;
+}
+body .present#saut-passe {
+  animation: fade-in 500ms ease-out 3.5s 1 reverse forwards;
+}
+body .present#saut-passe .tableau {
+  background: center/contain no-repeat url("../img/portrait-juste-cadre.png");
+}
+body .present#saut-passe .tableau .portrait {
+  animation: fade-in 1.5s ease-out 700ms 1 reverse forwards;
+}
+body .present#saut-passe .pensee {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+body .russie .swiper {
+  margin: 0 auto;
+  aspect-ratio: 16/9;
+  height: 100%;
+}
+body .russie .swiper .swiper-nav {
+  background-color: #f5ad31;
+  box-shadow: 0 0.25em 1em -0.75em rgba(0, 0, 0, 0.2);
+  width: 5.5em;
+  height: 5.5em;
+  border-radius: 50%;
+  color: transparent;
+  transition: transform 0.2s ease-in-out;
+}
+body .russie .swiper .swiper-nav:hover {
+  transform: scale(1.15);
+}
+body .russie .swiper .swiper-nav.swiper-button-prev {
+  background: #f5ad31 center/80% no-repeat url("../img/doigt-sign-invert.png");
+  left: 4em;
+}
+body .russie .swiper .swiper-nav.swiper-button-next {
+  background: #f5ad31 center/80% no-repeat url("../img/doigt-sign.png");
+  right: 4em;
+}
+body .russie.arrive {
+  animation: fade-in 500ms ease-in 1 normal forwards;
+}
+body .russie.mur, body .russie .mur {
+  background: center/contain no-repeat url("../img/mur-passe.jpg");
+}
+body .russie.mur .hoverzone, body .russie .mur .hoverzone {
+  aspect-ratio: 449/482;
+  width: 23.4%;
+  top: 12.95%;
+  left: 37.2%;
+}
+body .russie.salon, body .russie .salon {
+  background: center/contain no-repeat url("../img/morozov-hotel.jpg");
+}
+body .russie.salon .hoverzone, body .russie .salon .hoverzone {
+  width: 11.5%;
+  top: 41.3%;
+  left: 38.7%;
+}
+body .russie.galerie, body .russie .galerie {
+  background: center/contain no-repeat url("../img/morozov-salon-vide.jpg");
+}
+body .russie.galerie .tableau, body .russie .galerie .tableau {
+  position: absolute;
+  top: 12.2%;
+  left: 33.8%;
+  aspect-ratio: 1102/720;
+  width: 24.1%;
+}
+body .russie.galerie .tableau .hoverzone, body .russie .galerie .tableau .hoverzone {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+body .russie.galerie .tableau .dropzone, body .russie .galerie .tableau .dropzone {
+  height: 100%;
+}
+body .russie.galerie .tableau.depart, body .russie .galerie .tableau.depart {
+  top: unset;
+  left: 5%;
+  bottom: 3%;
+}
+body .russie.galerie .draggable-mirror, body .russie .galerie .draggable-mirror {
+  aspect-ratio: 1102/720;
+  width: 24.1em;
+  width: min(24.1vw, 42.8444444444vh);
+}
+body .russie.parler-morozov {
+  background: center/contain no-repeat url("../img/morozov-salon.jpg");
+}
+body .russie.convaincu {
+  background: center/contain no-repeat url("../img/morozov-salon-monet.jpg");
+}
+body #journal {
+  background: #d2dfe9;
+  padding: 2% 0;
+  box-sizing: border-box;
+}
+body #journal #canvas {
+  display: block;
+  background: center/contain no-repeat url(../img/journal-francais.jpg);
+  margin: auto;
+  box-shadow: 0 0.25em 1em -0.75em rgba(0, 0, 0, 0.2);
+}
+body #journal .reussite {
+  display: none;
+}
+@keyframes FromGiverny {
+  from {
+    bottom: 35%;
+    left: 75%;
+    opacity: 0;
+  }
+  to {
+    bottom: 30%;
+    left: 50%;
+    opacity: 1;
+  }
+}
+body #journal .button.reussite {
+  animation: FromGiverny 860ms ease-in-out normal forwards;
+}
+body #puzzle {
+  background: center/contain no-repeat url("../img/puzzle-carte-europe.webp");
+  position: relative;
+}
+body #puzzle .tuyaux-grid {
+  position: absolute;
+  top: 6.4%;
+  left: 11.9%;
+  width: 73.7%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+body #puzzle .tuyaux-grid .tuyau {
+  transform-origin: center;
+  transition: all 860ms ease-out;
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
+}
+body #puzzle .tuyaux-grid .tuyau[data-rotationactuelle="90"] {
+  transform: rotate(90deg);
+}
+body #puzzle .tuyaux-grid .tuyau[data-rotationactuelle="180"] {
+  transform: rotate(180deg);
+}
+body #puzzle .tuyaux-grid .tuyau[data-rotationactuelle="270"] {
+  transform: rotate(270deg);
+}
+body #puzzle .zeppelin {
+  width: 17%;
+  height: auto;
+  position: absolute;
+  top: 24%;
+  left: 81%;
+  translate: -50% -50%;
+  animation: pouloulou 6.5s ease-in-out 740ms normal forwards;
+  animation-play-state: paused;
+}
+@keyframes pouloulou {
+  0% {
+    top: 24%;
+    left: 81%;
+  }
+  30% {
+    top: 70%;
+    left: 65%;
+  }
+  70% {
+    top: 14%;
+    left: 33.5%;
+  }
+  100% {
+    top: 72%;
+    left: 17.5%;
+  }
+}
+body #puzzle .button {
+  bottom: 25%;
+}
+body .giverny {
+  background: center/contain no-repeat url("../img/giverny-atelier.jpg");
+}
+body .giverny#giverny-exte {
+  background: center/contain no-repeat url("../img/giverny-exte.jpg");
+}
+body .giverny#giverny-exte .hoverzone {
+  width: 9.25%;
+  top: 31.15%;
+  left: 44.48%;
+}
+body .giverny#giverny-int {
+  background: center/contain no-repeat url("../img/giverny-int.jpg");
+}
+body .giverny#giverny-int .hoverzone {
+  width: 11.85%;
+  top: 16.3%;
+  left: 72.4%;
+}
+body .giverny.atelier .hoverzone {
+  width: 34.75%;
+  bottom: 0;
+  left: 58.3%;
+}
+body #jeu-tableau {
+  background: center/contain no-repeat url("../img/waterloo/fond-jeu.png");
+}
+body #jeu-tableau .mur {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3% 4%;
+  box-sizing: border-box;
+  gap: 5% 2%;
+}
+body #jeu-tableau .mur .tableau {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  transition: all 500ms ease-in-out;
+}
+body #jeu-tableau .mur .tableau:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+body #jeu-tableau .mur .tableau.cache {
+  transform: perspective(600px) rotateY(180deg);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: default;
+  background: center/100% 100% no-repeat url("../img/waterloo/back-waterloo.jpg");
+}
+body #voyage {
+  animation: fade-in 500ms ease-out 9.5s 1 reverse forwards;
+}
+body #voyage .ciel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #f5dc9f;
+  background: linear-gradient(50deg, #f5dc9f 34%, #e0a745 100%);
+  background-size: 300%;
+  animation: animciel 10s linear forwards;
+}
+@keyframes animciel {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
+}
+@keyframes dirigeable {
+  0% {
+    left: 0%;
+    top: 70%;
+  }
+  50% {
+    left: 50%;
+    top: 40%;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    top: 70%;
+    opacity: 0;
+  }
+}
+body #voyage .zeppelin {
+  translate: -50% -50%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  animation: dirigeable 10s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+  width: 60%;
+}
+body #retour-present {
+  animation: fade-in 1s ease-in 1 normal forwards;
+}
+body #retour-present .present {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 16/9;
+  -webkit-mask-image: url(../img/ending-mask.png);
+          mask-image: url(../img/ending-mask.png);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  -webkit-mask-size: 120%;
+          mask-size: 120%;
+  -webkit-mask-position: 50% 50%;
+          mask-position: 50% 50%;
+  animation: ending 2.5s ease-out 5s forwards;
+}
+@keyframes ending {
+  0% {
+    -webkit-mask-position: 50% 50%;
+            mask-position: 50% 50%;
+    -webkit-mask-size: 120%;
+            mask-size: 120%;
+  }
+  30% {
+    -webkit-mask-position: 48% 26%;
+            mask-position: 48% 26%;
+    -webkit-mask-size: 12%;
+            mask-size: 12%;
+  }
+  85% {
+    -webkit-mask-position: 48% 26%;
+            mask-position: 48% 26%;
+    -webkit-mask-size: 12%;
+            mask-size: 12%;
+  }
+  100% {
+    -webkit-mask-position: 47.8% 28.3%;
+            mask-position: 47.8% 28.3%;
+    -webkit-mask-size: 0;
+            mask-size: 0;
+  }
+}
+body #retour-present .present .tableau .wink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  animation: fade-in 200ms ease-in 6s 1 normal forwards;
+}
+body #retour-present .fin {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 18% 27%;
+  text-align: center;
+}
+body #retour-present .fin .epilogue {
+  margin: 1em 0;
+  font-size: 1.33em;
+  line-height: 1.5;
+  text-align: left;
+  opacity: 0;
+  animation: fade-in 500ms ease-in 7.5s 1 normal forwards;
+}
+body #retour-present .fin .button {
+  position: unset;
+  width: -moz-fit-content;
+  width: fit-content;
+  translate: unset;
+  display: inline-block;
+  margin-top: 0.5em;
+  opacity: 0;
+  animation-delay: 9s;
+}/*# sourceMappingURL=style.css.map */
