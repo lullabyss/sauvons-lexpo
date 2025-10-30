@@ -219,6 +219,7 @@ body .present .tableau {
   left: 37%;
   aspect-ratio: 1019/1080;
   width: 24%;
+  background: center/contain no-repeat url("../img/portrait-juste-cadre.webp");
 }
 body .present .tableau .hoverzone {
   top: 0;
@@ -257,9 +258,6 @@ body .present#scene-dexpo-deux .hoverzone {
 }
 body .present#saut-passe {
   animation: fade-in 500ms ease-out 3.5s 1 reverse forwards;
-}
-body .present#saut-passe .tableau {
-  background: center/contain no-repeat url("../img/portrait-juste-cadre.webp");
 }
 body .present#saut-passe .tableau .portrait {
   animation: fade-in 1.5s ease-out 700ms 1 reverse forwards;

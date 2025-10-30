@@ -22,6 +22,7 @@ body{
 			left: 37%;
 			aspect-ratio: 1019/1080;
 			width: 24%;
+			background: center / contain no-repeat url("../img/portrait-juste-cadre.webp");
 
 			.hoverzone{
 				top: 0;
@@ -74,8 +75,6 @@ body{
 		// Saut temporel
 		&#saut-passe{
 			.tableau{
-				background: center / contain no-repeat url("../img/portrait-juste-cadre.webp");
-
 				.portrait{
 					animation: fade-in 1.5s ease-out 700ms 1 reverse forwards;
 				}
