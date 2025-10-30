@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	img.onload = start;
 
 	// Définit la source de l’image
-	img.src = "../img/journal-russe.jpg";
+	img.src = "/sauvons-lexpo/img/journal-russe.jpg";
 
 	function start() {
 		// Dessine l’image sur tout le canvas
