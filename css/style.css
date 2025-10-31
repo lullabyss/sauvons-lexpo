@@ -221,6 +221,9 @@ body .present .tableau {
   width: 24%;
   background: center/contain no-repeat url("../img/portrait-juste-cadre.webp");
 }
+body .present .tableau.container {
+  background: none;
+}
 body .present .tableau .hoverzone {
   top: 0;
   left: 0;
