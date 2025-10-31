@@ -225,35 +225,7 @@
 
 		&:hover{
 			opacity: 1;
+			cursor: pointer;
 		}
 	}
-}
-
-
-// Fin Looney Toons
-@mixin Ending{
-	@keyframes ending {
-		0%{
-			mask-position: 50% 50%;
-			mask-size: 120%;
-		}
-		30%{
-			mask-position: 48% 26%;
-			mask-size: 12%;
-		}
-		85%{
-			mask-position: 48% 26%;
-			mask-size: 12%;
-		}
-		100%{
-			mask-position: 47.8% 28.3%;
-			mask-size: 0;
-		}
-	}
-
-	mask-image: url(../img/ending-mask.png);
-	mask-repeat: no-repeat;
-	mask-composite: exclude;
-	mask-size: 120%;
-	mask-position: 50% 50%;
 }

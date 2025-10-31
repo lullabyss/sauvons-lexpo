@@ -209,6 +209,7 @@ body .scene .hoverzone {
 }
 body .scene .hoverzone:hover {
   opacity: 1;
+  cursor: pointer;
 }
 body .present {
   background: center/contain no-repeat url("../img/mur-present.webp");
@@ -229,6 +230,9 @@ body .present .tableau .hoverzone {
   left: 0;
   width: 100%;
   z-index: 2;
+}
+body .present .tableau .hoverzone:hover {
+  cursor: grab;
 }
 body .present .tableau .dropzone {
   height: 100%;
@@ -329,6 +333,9 @@ body .russie.galerie .tableau .hoverzone, body .russie .galerie .tableau .hoverz
   left: 0;
   width: 100%;
   z-index: 2;
+}
+body .russie.galerie .tableau .hoverzone:hover, body .russie .galerie .tableau .hoverzone:hover {
+  cursor: grab;
 }
 body .russie.galerie .tableau .dropzone, body .russie .galerie .tableau .dropzone {
   height: 100%;
@@ -549,8 +556,6 @@ body #retour-present .present {
           mask-image: url(../img/ending-mask.png);
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
   -webkit-mask-size: 120%;
           mask-size: 120%;
   -webkit-mask-position: 50% 50%;
