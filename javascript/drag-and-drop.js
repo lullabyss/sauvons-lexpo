@@ -16,6 +16,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	// --- Draggable events --- //
 	droppable.on("drag:start", (evt) => {
 		droppableOrigin = evt.originalSource.parentNode.dataset.dropzone;
+		document.body.style.cursor = "grabbing";
 	});
 
 
@@ -24,11 +25,13 @@ window.addEventListener("DOMContentLoaded", function () {
 		if (droppableOrigin !== evt.dropzone.dataset.dropzone) {
 			evt.cancel();
 		}
+		document.body.style.cursor = "default";
 
 		setTimeout(function () {
 			areAllElementsPlaced();
-		}, 500);
+		}, 250);
 	});
+	
 
 	
 	// Quand le tableau est au bon endroit :
